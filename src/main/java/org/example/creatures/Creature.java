@@ -51,8 +51,11 @@ public abstract class Creature {
         if (isHitSuccessful) {
             int damage = Randomizer.randomPositiveFromInterval(this.minDamage, this.maxDamage);
 
+            System.out.println("[Damaged " + damage + "hp]");
             target.dealDamage(damage);
         }
+        else
+            System.out.println("[Miss]");
     }
 
     public int getAttack() {

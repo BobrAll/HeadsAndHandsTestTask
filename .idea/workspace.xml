@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df417dd7-9011-4c03-a184-93fda5957975" name="Changes" comment="Done:&#10;1) Behavior logic is implemented in all classes&#10;2) Added classes for randomization&#10;ToDo:&#10;1) Add logging&#10;2) Add fields validation in all classes&#10;3) Make tests for all classes">
+    <list default="true" id="df417dd7-9011-4c03-a184-93fda5957975" name="Changes" comment="Done:&#10;1) Fields validation&#10;2) Removed field name in Creature class&#10;ToDo:&#10;1) Add logging&#10;3) Make tests for all classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Tournament.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/creatures/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/creatures/Creature.java" afterDir="false" />
@@ -25,6 +26,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="14bcee22-b1f3-4993-bc37-277e0cf213e9" />
+        <option name="url" value="https://github.com/BobrAll/HeadsAndHandsTestTask.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695378780195</updated>
-      <workItem from="1695378781505" duration="16970000" />
+      <workItem from="1695378781505" duration="20487000" />
     </task>
     <task id="LOCAL-00001" summary="Done:&#10;1) Behavior logic is implemented in all classes&#10;2) Added classes for randomization&#10;ToDo:&#10;1) Add logging&#10;2) Add fields validation in all classes&#10;3) Make tests for all classes">
       <created>1695397123049</created>
@@ -83,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695397123049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Done:&#10;1) Fields validation&#10;2) Removed field name in Creature class&#10;ToDo:&#10;1) Add logging&#10;3) Make tests for all classes">
+      <created>1695420413736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695420413736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done:&#10;1) Behavior logic is implemented in all classes&#10;2) Added classes for randomization&#10;ToDo:&#10;1) Add logging&#10;2) Add fields validation in all classes&#10;3) Make tests for all classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done:&#10;1) Behavior logic is implemented in all classes&#10;2) Added classes for randomization&#10;ToDo:&#10;1) Add logging&#10;2) Add fields validation in all classes&#10;3) Make tests for all classes" />
+    <MESSAGE value="Done:&#10;1) Fields validation&#10;2) Removed field name in Creature class&#10;ToDo:&#10;1) Add logging&#10;3) Make tests for all classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done:&#10;1) Fields validation&#10;2) Removed field name in Creature class&#10;ToDo:&#10;1) Add logging&#10;3) Make tests for all classes" />
   </component>
 </project>

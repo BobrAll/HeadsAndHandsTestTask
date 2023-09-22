@@ -11,7 +11,7 @@ public class Player extends Creature {
     public void heal() {
         if (healCounter < MAX_HEAL_ATTEMPTS) {
             if (getHealth() == getMaxHealth()) {
-                System.out.println("[already have max health]");
+                System.out.println("[Already have max health]");
                 return;
             }
 
@@ -19,9 +19,18 @@ public class Player extends Creature {
 
             setHealth(getHealth() + healValue);
 
+            System.out.println("[Healed to " + getHealth() + " hp]");
             healCounter++;
         } else {
-            System.out.println("[haven't heal attempts]");
+            System.out.println("[Haven't heal attempts]");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Player:  [" +
+                "health=" + getHealth() +
+                ", heal attempts=" + (MAX_HEAL_ATTEMPTS - healCounter) + "/" + MAX_HEAL_ATTEMPTS +
+                ']';
     }
 }
