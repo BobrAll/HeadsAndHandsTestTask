@@ -5,10 +5,8 @@ import org.example.creatures.Player;
 
 public class App {
     public static void main( String[] args ) {
-        Player player = new Player(7,3,1, 6, 10);
-        Monster monster = new Monster(10,2,1, 6, 10);
-
-        Tournament.duel(player, monster);
+        Tournament.duel(new Player(7, 3, 1, 6, 10),
+                new Monster(10, 2, 1, 6, 10));
 
         Tournament.deathmatch(
                 new Player(7, 2, 5, 10, 10),

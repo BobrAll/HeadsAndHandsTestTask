@@ -1,5 +1,6 @@
 package org.example.creatures;
 
+import org.example.exceptions.CreatureDiedException;
 import org.example.random.Dice;
 import org.example.random.Randomizer;
 
@@ -29,7 +30,7 @@ public abstract class Creature {
 
         if (this.health <= 0) {
             setAlive(false);
-            throw new IllegalStateException("[Creature is died]");
+            throw new CreatureDiedException("[Creature is died]");
         }
     }
 

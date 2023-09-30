@@ -3,6 +3,7 @@ package org.example;
 import org.example.creatures.Creature;
 import org.example.creatures.Monster;
 import org.example.creatures.Player;
+import org.example.exceptions.CreatureDiedException;
 import org.example.random.Randomizer;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class Tournament {
 
             try {
                 attackCreature.hit(attackedCreature);
-            } catch (IllegalStateException e) {
+            } catch (CreatureDiedException e) {
                 blackList.add(attackedCreatureId);
                 System.out.println("[Creature #" + attackedCreatureId + " died]");
             } finally {
@@ -61,7 +62,7 @@ public class Tournament {
 
                 round++;
             }
-        } catch (IllegalStateException e) {
+        } catch (CreatureDiedException e) {
             System.out.println(e.getMessage());
         }
 

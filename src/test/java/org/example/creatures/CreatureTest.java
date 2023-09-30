@@ -1,5 +1,6 @@
 package org.example.creatures;
 
+import org.example.exceptions.CreatureDiedException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,17 +11,17 @@ public class CreatureTest {
     public void deathTest() {
         Creature monster = new Monster(1, 1, 1, 1, 10);
 
-        Throwable thrown = assertThrows(IllegalStateException.class, () -> monster.setHealth(0));
+        Throwable thrown = assertThrows(CreatureDiedException.class, () -> monster.setHealth(0));
         assertNotNull(thrown.getMessage());
 
-        thrown = assertThrows(IllegalStateException.class, () -> monster.setHealth(-1));
+        thrown = assertThrows(CreatureDiedException.class, () -> monster.setHealth(-1));
         assertNotNull(thrown.getMessage());
     }
 
     @Test
     public void dealDamageTest() {
         Creature monster = new Monster(1, 1, 1, 1, 10);
-        Throwable thrown = assertThrows(IllegalStateException.class, () -> monster.dealDamage(monster.getMaxHealth()));
+        Throwable thrown = assertThrows(CreatureDiedException.class, () -> monster.dealDamage(monster.getMaxHealth()));
         assertNotNull(thrown.getMessage());
     }
 

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df417dd7-9011-4c03-a184-93fda5957975" name="Changes" comment="Done:&#10;1) Made tests for Player and Creature classes&#10;2) Fixed incorrect handling of creature death&#10;ToDo:&#10;1) Remake Tournament class (remove current method and make 2 static methods - duel and deathmatch)">
+    <list default="true" id="df417dd7-9011-4c03-a184-93fda5957975" name="Changes" comment="Done:&#10;1) Remade Tournament class&#10;2) Now possible to generate random num considering black list">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/CreatureDiedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tournament.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/random/Randomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/random/Randomizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/creatures/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/creatures/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/creatures/CreatureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/creatures/CreatureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -151,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.creatures in HeadsAndHandsTestTask" />
         <item itemvalue="JUnit.All in HeadsAndHandsTestTask" />
+        <item itemvalue="JUnit.creatures in HeadsAndHandsTestTask" />
         <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="JUnit.org.example.creatures in HeadsAndHandsTestTask" />
         <item itemvalue="JUnit.CreatureTest" />
@@ -169,7 +170,7 @@
       <updated>1695378780195</updated>
       <workItem from="1695378781505" duration="20677000" />
       <workItem from="1695486491826" duration="21000" />
-      <workItem from="1696075705758" duration="15489000" />
+      <workItem from="1696075705758" duration="16774000" />
     </task>
     <task id="LOCAL-00001" summary="Done:&#10;1) Behavior logic is implemented in all classes&#10;2) Added classes for randomization&#10;ToDo:&#10;1) Add logging&#10;2) Add fields validation in all classes&#10;3) Make tests for all classes">
       <created>1695397123049</created>
@@ -199,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696095788324</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Done:&#10;1) Remade Tournament class&#10;2) Now possible to generate random num considering black list">
+      <created>1696102682404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696102682404</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +218,7 @@
     <MESSAGE value="Done:&#10;1) Fields validation&#10;2) Removed field name in Creature class&#10;ToDo:&#10;1) Add logging&#10;3) Make tests for all classes" />
     <MESSAGE value="Done:&#10;1) Added and implemented Tournament class&#10;2) Improved text display for the user&#10;ToDo:&#10;1) Add logging&#10;2) Make tests for all classes" />
     <MESSAGE value="Done:&#10;1) Made tests for Player and Creature classes&#10;2) Fixed incorrect handling of creature death&#10;ToDo:&#10;1) Remake Tournament class (remove current method and make 2 static methods - duel and deathmatch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done:&#10;1) Made tests for Player and Creature classes&#10;2) Fixed incorrect handling of creature death&#10;ToDo:&#10;1) Remake Tournament class (remove current method and make 2 static methods - duel and deathmatch)" />
+    <MESSAGE value="Done:&#10;1) Remade Tournament class&#10;2) Now possible to generate random num considering black list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done:&#10;1) Remade Tournament class&#10;2) Now possible to generate random num considering black list" />
   </component>
 </project>
