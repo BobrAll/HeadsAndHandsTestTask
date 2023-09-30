@@ -1,4 +1,4 @@
-package org.example;
+package org.example.random;
 
 public class Dice {
     private static final int MIN_DICE_VALUE = 1;

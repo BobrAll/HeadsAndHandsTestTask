@@ -1,11 +1,12 @@
 package org.example.creatures;
 
-import org.example.Dice;
-import org.example.Randomizer;
+import org.example.random.Dice;
+import org.example.random.Randomizer;
 
 public abstract class Creature {
     private static final int SUCCESS_HIT_THRESHOLD = 5;
     private static final int ATTACK_MODIFIER_BONUS = 1;
+    private static final int MIN_ATTACK_MODIFIER = 1;
 
     private int attack;
     private int protection;
@@ -26,17 +27,19 @@ public abstract class Creature {
     public void setHealth(int health) {
         this.health = Math.min(health, maxHealth);
 
-        if (this.health <= 0)
+        if (this.health <= 0) {
             setAlive(false);
+            throw new IllegalStateException("[Creature is died]");
+        }
     }
 
     public void dealDamage(int damage) {
         setHealth(getHealth() - damage);
     }
 
-    private int calcAttackModifier(int targetProtection) {
+    protected int calcAttackModifier(int targetProtection) {
         int attackModifier = this.getAttack() - targetProtection + ATTACK_MODIFIER_BONUS;
-        return attackModifier > 0? attackModifier : 1; //must be greater than 1 to try luck at least once
+        return Math.max(attackModifier, MIN_ATTACK_MODIFIER); //must be greater than 1 to try luck at least once
     }
 
     public void hit(Creature target) {

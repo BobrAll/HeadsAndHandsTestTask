@@ -4,8 +4,8 @@ import org.example.creatures.Monster;
 import org.example.creatures.Player;
 
 public class Tournament {
-    Player player;
-    Monster monster;
+    private Player player;
+    private Monster monster;
 
     public Tournament(Player player, Monster monster) {
         this.player = player;
@@ -16,22 +16,23 @@ public class Tournament {
         System.out.println("Tournament begins!");
 
         int round = 1;
-        while (player.isAlive() && monster.isAlive()) {
-            System.out.println(
-                    "\nRound #" + round +
-                    "\n" + monster +
-                    "\n" + player);
+        try {
+            while (player.isAlive() && monster.isAlive()) {
+                System.out.println("\nRound #" + round + "\n" + monster + "\n" + player);
 
-            System.out.println("Monster hits player.");
-            monster.hit(player);
+                System.out.println("Monster hits player.");
+                monster.hit(player);
 
-            System.out.println("Player hits monster.");
-            player.hit(monster);
+                System.out.println("Player hits monster.");
+                player.hit(monster);
 
-            System.out.println("Player tries to heal.");
-            player.heal();
+                System.out.println("Player tries to heal.");
+                player.heal();
 
-            round++;
+                round++;
+            }
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
         }
 
         System.out.println("\nTournament is finished!");
