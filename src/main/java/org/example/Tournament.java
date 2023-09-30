@@ -1,19 +1,49 @@
 package org.example;
 
+import org.example.creatures.Creature;
 import org.example.creatures.Monster;
 import org.example.creatures.Player;
+import org.example.random.Randomizer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tournament {
-    private Player player;
-    private Monster monster;
 
-    public Tournament(Player player, Monster monster) {
-        this.player = player;
-        this.monster = monster;
+    public static void deathmatch(Creature... creatures) {
+        List<Integer> blackList = new ArrayList<>(creatures.length - 1);
+        int winnerId = 0;
+
+        System.out.println("Deathmatch begins!");
+
+        while (blackList.size() != creatures.length - 1) {
+            int attackCreatureId, attackedCreatureId;
+
+            attackCreatureId = Randomizer.randomPositiveFromInterval(0, creatures.length, blackList);
+            blackList.add(0, attackCreatureId);
+            attackedCreatureId = Randomizer.randomPositiveFromInterval(0, creatures.length, blackList);
+
+            System.out.println("\nCreature #" + attackCreatureId + " hits Creature #" + attackedCreatureId);
+
+            Creature attackCreature = creatures[attackCreatureId];
+            Creature attackedCreature = creatures[attackedCreatureId];
+
+            try {
+                attackCreature.hit(attackedCreature);
+            } catch (IllegalStateException e) {
+                blackList.add(attackedCreatureId);
+                System.out.println("[Creature #" + attackedCreatureId + " died]");
+            } finally {
+                winnerId = attackCreatureId;
+                blackList.remove(0);
+            }
+        }
+
+        System.out.println("\nDeathmatch finished, winner is Creature #" + winnerId);
     }
 
-    public void start() {
-        System.out.println("Tournament begins!");
+    public static void duel(Player player, Monster monster) {
+        System.out.println("Duel begins!");
 
         int round = 1;
         try {
@@ -35,7 +65,6 @@ public class Tournament {
             System.out.println(e.getMessage());
         }
 
-        System.out.println("\nTournament is finished!");
-        System.out.println("Winner is " + (player.isAlive()? player : monster));
+        System.out.println("\nDuel finished, winner is " + (player.isAlive()? player : monster));
     }
 }
